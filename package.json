@@ -1,27 +1,27 @@
 {
   "name": "rest-shop",
   "version": "1.0.0",
-  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
+  "description": "___        ______     ____ _                 _  ___           / \\ \\      / / ___|   / ___| | ___  _   _  __| |/ _ \\         / _ \\ \\ /\\ / /\\___ \\  | |   | |/ _ \\| | | |/ _` | (_) |       / ___ \\ V  V /  ___) | | |___| | (_) | |_| | (_| |\\__, |      /_/   \\_\\_/\\_/  |____/   \\____|_|\\___/ \\__,_|\\__,_|  /_/   -----------------------------------------------------------------",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Roberto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ernestoguevara92/node-rest-shop.git"
   },
-  "keywords": [
-    "node",
-    "restful",
-    "api"
-  ],
-  "author": "Roberto (Maximilian Scharzmuller course)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ernestoguevara92/node-rest-shop/issues"
   },
-  "homepage": "https://github.com/ernestoguevara92/node-rest-shop#readme",
-  "dependencies": {
-    "express": "^4.18.1"
-  }
+  "homepage": "https://github.com/ernestoguevara92/node-rest-shop#readme"
 }
