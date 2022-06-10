@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://roberto:' + process.env.MONGO_ATLAS_PW + '@clust
         useMongoClient: true
     }
 );
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
