@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
    Order
     .find()
     .select('product quantity _id')
+    .populate('product', 'name')
     .exec()
     .then(docs => {
         res.status(200).json({
@@ -21,7 +22,7 @@ router.get('/', (req, res, next) => {
                     quantity: doc.quantity,
                     request: {
                         type: 'GET',
-                        url: 'http://localhost:3000/orders' + doc._id
+                        url: 'http://localhost:3000/orders/' + doc._id
                     }
                 }
             })
@@ -61,7 +62,7 @@ router.post('/', (req, res, next) => {
                 },
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:3000/orders' + result._id
+                    url: 'http://localhost:3000/orders/' + result._id
                 }
             });
         })
@@ -75,6 +76,7 @@ router.post('/', (req, res, next) => {
 
 router.get('/:orderId', (req, res, next) => {
    Order.findById(req.params.orderId)
+    .populate('product')
     .exec()
     .then(order => {
         if (!order) {
